@@ -1,0 +1,152 @@
+body {
+  min-width: 915px;
+}
+
+#map {
+  height: 450px;
+  width: 850px;
+}
+
+.cd-section__wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.leaflet-popup-content-wrapper {
+  font-size: 13px;
+}
+
+.leaflet-marker-icon {
+  border-radius: 50%;
+}
+
+.leaflet-popup-content {
+  text-align: center;
+}
+
+.leaflet-popup-content b {
+  font-weight: 700;
+}
+
+.leaflet-popup-content p {
+  margin: 5px 0 0 0;
+}
+
+.map-wrapper {
+  position: relative;
+}
+
+.map-nav {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translate(-50%, 0);
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.map-nav__item {
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: background ease .2s, opacity ease .2s, transform ease .1s, width ease .1s, height ease .1s;
+}
+
+.map-nav__item.visited {
+  background: #3bd394;
+  opacity: .6;
+}
+
+.map-nav__item.active {
+  background: #3bd394;
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+}
+
+
+.map-nav__item:hover {
+  opacity: .5;
+}
+
+.leaflet-bottom svg {
+  display: none !important;
+}
+
+.map-nav__item:active {
+  transform: scale(.9);
+}
+
+
+/* Настройка слайдера */
+.swiper-slide {
+  padding: 50px 100px 50px 50px;
+  display: flex;
+  column-gap: 30px;
+}
+
+.swiper-slide:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.swiper-slide img {
+  max-width: 620px;
+  max-height: 410px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px #fff;
+}
+
+.slide__text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  text-indent: 3px;
+}
+
+.slider {
+  overflow-x: hidden;
+}
+
+.slider__nav {
+  position: absolute;
+  bottom: 35px;
+  cursor: pointer;
+  transition: opacity ease .2s;
+}
+
+.slider__nav.disabled {
+  opacity: .2;
+}
+
+.slider__nav:hover {
+  opacity: .7;
+}
+
+.slider__prev {
+  left: 37%;
+  transform: scale(-1);
+}
+
+.slider__next {
+  right: 37%;
+}
+
+@media (max-width: 915px) {
+  .slide {
+    flex-direction: column !important;
+    row-gap: 30px;
+    align-items: center;
+  }
+
+  .slide__text-content {
+    text-align: center;
+  }
+}

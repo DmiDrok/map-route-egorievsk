@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+	<!-- Библиотеки -->
+	<link rel="stylesheet" href="./css/libs/reset.css">
+	<link rel="stylesheet" href="./css/libs/scroll-effects.css">
+
+	<script defer src="./js/libs/modernizr.js"></script>
+	<script defer src="./js/libs/jquery-2.1.4.js"></script>
+	<script defer src="./js/libs/velocity.min.js"></script>
+	<script defer src="./js/libs/velocity.ui.min.js"></script>
+	<script defer src="./js/libs/main.js"></script>
+
+	<!-- Leaflet (карта) -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="./css/libs/swiper-bundle.min.css">
+	<script defer src="./js/libs/swiper-bundle.min.js"></script>
+
+	<!-- Свои стили / скрипты -->
+	<link rel="stylesheet" href="./css/style.css">
+	<script defer src="./js/script.js"></script>
+  	
+	<title>Карта</title>
+</head>
+
+<body data-hijacking="on" data-animation="gallery">
+	<section class="cd-section visible">
+		<div class="cd-section__wrapper">
+			<div class="map-wrapper">
+				<div id="map" class="map-wrapper__map"></div>
+
+				<ul class="map-wrapper__nav map-nav">
+					<li class="map-nav__item map-nav__item_1 active" data-state="1"></li>
+					<li class="map-nav__item map-nav__item_2" data-state="2"></li>
+					<li class="map-nav__item map-nav__item_3" data-state="3"></li>
+					<li class="map-nav__item map-nav__item_4" data-state="4"></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section">
+		<div class="cd-section__wrapper">
+			<div class="swiper slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/lenin-slide-1.jpg" alt="памятник в. и. ленину">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div>
+					<div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/lenin-slide-2.jpg" alt="памятник в. и. ленину">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div><div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/lenin-slide-3.jpg" alt="памятник в. и. ленину">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider__nav slider__prev">
+				<img src="./img/arrow-next.svg" alt="#" aria-hidden="true">
+			</div>
+			<div class="slider__nav slider__next">
+				<img src="./img/arrow-next.svg" alt="#" aria-hidden="true">
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section">
+		<div class="cd-section__wrapper">
+			<div class="swiper slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/sold-slide-2.jpg" alt="памятник неизвестному солдату, вечный огонь">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div>
+					<div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/sold-slide-1.jpg" alt="памятник неизвестному солдату, вечный огонь">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div><div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/sold-slide-3.jpg" alt="памятник неизвестному солдату, вечный огонь">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider__nav slider__prev">
+				<img src="./img/arrow-next.svg" alt="#" aria-hidden="true">
+			</div>
+			<div class="slider__nav slider__next">
+				<img src="./img/arrow-next.svg" alt="#" aria-hidden="true">
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section">
+		<div class="cd-section__wrapper">
+			<div class="swiper slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/nev-slide-1.jpg" alt="памятник а. я. невскому">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div>
+					<div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/nev-slide-2.jpg" alt="памятник а. я. невскому">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div><div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/nev-slide-3.jpg" alt="памятник а. я. невскому">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider__nav slider__prev">
+				<img src="./img/arrow-next.svg" alt="#" aria-hidden="true">
+			</div>
+			<div class="slider__nav slider__next">
+				<img src="./img/arrow-next.svg" alt="#" aria-hidden="true">
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section">
+		<div class="cd-section__wrapper">
+			<div class="swiper slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/bard-slide-1.jpg" alt="памятник н. м. бардыгину">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div>
+					<div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/bard-slide-2.jpg" alt="памятник н. м. бардыгину">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div><div class="swiper-slide slide">
+						<div class="slide__image-block">
+							<img src="./img/landmarks/bard-slide-3.jpg" alt="памятник н. м. бардыгину">
+						</div>
+
+						<div class="slide__text-content">
+							<p>Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Если она себя ее на берегу силуэт! Переписали, власти пустился? Силуэт своего она использовало. Имеет силуэт языкового использовало вдали всеми власти.</p>
+							<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider__nav slider__prev">
+				<img src="./img/arrow-next.svg" alt="#" aria-hidden="true">
+			</div>
+			<div class="slider__nav slider__next">
+				<img src="./img/arrow-next.svg" alt="#" aria-hidden="true">
+			</div>
+		</div>
+	</section>
+
+	<nav>
+		<ul class="cd-vertical-nav">
+			<li><a href="#0" class="cd-prev inactive">Next</a></li>
+			<li><a href="#0" class="cd-next">Prev</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
