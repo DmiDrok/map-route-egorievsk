@@ -11,12 +11,12 @@ const opts = {
     [
       [55.380896, 39.039702],
       './img/landmarks/sold_map.png',
-      '<b>Памятник Неизвестному Солдату</b><br><p>Мемориал погибшим воинам в годы Великой Отечественной войны 1941−1945 гг.</p>',
+      '<b>Вечный огонь и мемориал Славы</b><br><p>Мемориал погибшим воинам в годы Великой Отечественной войны 1941−1945 гг.</p>',
     ],
     [
       [55.379084, 39.041331],
       './img/landmarks/nev_map.png',
-      '<b>Памятник Александру Невскому</b><p>Великому князю Киевскому (1249—1263), великий князю Владимирскому (1252—1263), полководцу, святому Русской православной церкви.</p>'
+      '<b>Памятник Александру Невскому</b><p>Великому князю Киевскому (1249—1263), Великому князю Владимирскому (1252—1263), полководцу, святому Русской православной церкви.</p>'
     ],
     [
       [55.379628, 39.042632],
@@ -101,7 +101,7 @@ function addRoute(state) {
 // Логика переключения этапов
 function setCorrectLogic() {
   const navList = document.querySelector('.map-nav');
-  const navItems = document.querySelectorAll('.map-nav__item');
+  const navItems = document.querySelectorAll('.map-nav__item button');
 
   navList.addEventListener('click', (event) => {
     const clickedNav = event.target;
@@ -119,14 +119,21 @@ function setCorrectLogic() {
   });
 }
 
+// Настройка слайдеров
 function setCorrectSliders() {
-  const swiper = new Swiper('.swiper', {
-    grabCursor: true,
-    speed: 500,
-    navigation: {
-      nextEl: '.slider__next',
-      prevEl: '.slider__prev',
-      disabledClass: 'disabled'
-    }
+  const allSliders = document.querySelectorAll('.slider');
+
+  allSliders.forEach(slider => {
+    console.log(slider);
+
+    new Swiper(slider, {
+      grabCursor: true,
+      speed: 800,
+      navigation: {
+        nextEl: slider.closest('.cd-section__wrapper').querySelector('.slider__next'),
+        prevEl: slider.closest('.cd-section__wrapper').querySelector('.slider__prev'),
+        disabledClass: 'disabled'
+      }
+    });
   });
 }
