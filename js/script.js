@@ -5,22 +5,22 @@ const opts = {
   center: [55.381362, 39.039537],
   markers: [
     [
-      [55.383142, 39.036125],
+      [55.383166, 39.036072],
       './img/landmarks/lenin_map.png',
       '<b>Памятник В. И. Ленину</b><br><p>Основателю первого в мире Социалистического государства.</p>'
     ],
     [
-      [55.380896, 39.039702],
+      [55.380966, 39.039886],
       './img/landmarks/sold_map.png',
       '<b>Вечный огонь и мемориал Славы</b><br><p>Мемориал погибшим воинам в годы Великой Отечественной войны 1941−1945 гг.</p>',
     ],
     [
-      [55.379084, 39.041331],
+      [55.379195, 39.041467],
       './img/landmarks/nev_map.png',
       '<b>Памятник Александру Невскому</b><p>Великому князю Киевскому (1249—1263), Великому князю Владимирскому (1252—1263), полководцу, святому Русской православной церкви.</p>'
     ],
     [
-      [55.379628, 39.042632],
+      [55.379933, 39.042869],
       './img/landmarks/bard_map.png',
       '<b>Памятник Никифору Бардыгину</b><p>Крупному российскому фабриканту, купцу первой гильдии, общественному деятелю и меценату, Егорьевскому городскому голове (1872—1901).</p>'
     ]
@@ -41,7 +41,7 @@ maps.forEach((map) => {
 
 setCorrectLogic();
 setCorrectSliders();
-setCorrectLazyLoad();
+// setCorrectLazyLoad();
 
 
 // Иницилизация карты в DOM
@@ -83,7 +83,7 @@ function addRoute(map, state) {
     [55.382981, 39.035817],
     [55.380676, 39.039364],
     [55.379229, 39.041520],
-    [55.379628, 39.042632],
+    [55.379933, 39.042869],
   ];
   const latlng = allLatLng.filter((item, index) => {
     if (index <= state-1) {
@@ -137,12 +137,13 @@ function setCorrectSliders() {
   const allSliders = document.querySelectorAll('.slider');
 
   allSliders.forEach(slider => {
-    console.log(slider);
-
     new Swiper(slider, {
       grabCursor: true,
       speed: 800,
       preventInteractionOnTransition: true,
+      keyboard: {
+        enabled: true,
+      },
       navigation: {
         nextEl: slider.closest('.cd-section__wrapper').querySelector('.slider__next'),
         prevEl: slider.closest('.cd-section__wrapper').querySelector('.slider__prev'),
@@ -153,8 +154,8 @@ function setCorrectSliders() {
 }
 
 // Ленивая загрузка
-function setCorrectLazyLoad() {
-  const lazy = new LazyLoad({
+// function setCorrectLazyLoad() {
+//   const lazy = new LazyLoad({
 
-  });
-}
+//   });
+// }

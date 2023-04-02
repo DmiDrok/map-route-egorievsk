@@ -97,18 +97,19 @@ body {
   opacity: .5;
 }
 
+.map-nav__item button:active {
+  transform: scale(.9);
+}
+
 .leaflet-bottom svg {
   display: none !important;
 }
 
-.map-nav__item:active {
-  transform: scale(.9);
-}
 
 
 /* Настройка слайдера */
 .swiper-slide {
-  padding: 0 10px 0 10px; 
+  padding: 10px; 
   display: flex;
   column-gap: 30px;
   justify-content: center;
@@ -123,7 +124,7 @@ body {
   max-height: 410px;
   object-fit: cover;
   border-radius: 5px;
-  box-shadow: 0px 3px 10px #fff;
+  box-shadow: 0px 0px 10px #fff;
 }
 
 .slide__text-content {
@@ -168,6 +169,10 @@ body {
 }
 
 @media (max-width: 915px) {
+  .cd-section {
+    min-height: 800px;
+  }
+
   .slide {
     flex-direction: column !important;
     row-gap: 30px;
