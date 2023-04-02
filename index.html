@@ -24,6 +24,9 @@
 	<link rel="stylesheet" href="./css/libs/swiper-bundle.min.css">
 	<script defer src="./js/libs/swiper-bundle.min.js"></script>
 
+	<!-- LazyLoad -->
+	<script defer src="./js/libs/lazyload.min.js"></script>
+
 	<!-- Свои стили / скрипты -->
 	<link rel="stylesheet" href="./css/style.css">
 	<script defer src="./js/script.js"></script>
@@ -38,8 +41,8 @@
 		<div class="cd-section__wrapper">
 			<h3 class="cd-section__title">Карта достопримечательностей</h3>
 
-			<div class="map-wrapper">
-				<div id="map" class="map-wrapper__map"></div>
+			<div class="map-wrapper" data-map="1">
+				<div id="map-1" class="map"></div>
 
 				<ul class="map-wrapper__nav map-nav">
 					<li class="map-nav__item map-nav__item_1">
@@ -68,7 +71,7 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide slide">
 							<div class="slide__image-block">
-								<img src="./img/landmarks/lenin-slide-1.jpg" alt="памятник в. и. ленину">
+								<img class="lazy" src="#" data-src="./img/landmarks/lenin-slide-1.jpg" alt="памятник в. и. ленину">
 							</div>
 
 							<div class="slide__text-content">
@@ -88,7 +91,7 @@
 							</div>
 						</div><div class="swiper-slide slide">
 							<div class="slide__image-block">
-								<img src="./img/landmarks/lenin-slide-3.jpg" alt="памятник в. и. ленину">
+								<img class="lazy" src="#" data-src="./img/landmarks/lenin-slide-3.jpg" alt="памятник в. и. ленину">
 							</div>
 
 							<div class="slide__text-content">
@@ -118,7 +121,7 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide slide">
 							<div class="slide__image-block">
-								<img src="./img/landmarks/sold-slide-2.jpg" alt="памятник неизвестному солдату, вечный огонь">
+								<img class="lazy" src="#" data-src="./img/landmarks/sold-slide-2.jpg" alt="памятник неизвестному солдату, вечный огонь">
 							</div>
 
 							<div class="slide__text-content">
@@ -137,7 +140,7 @@
 							</div>
 						</div><div class="swiper-slide slide">
 							<div class="slide__image-block">
-								<img src="./img/landmarks/sold-slide-3.jpg" alt="памятник неизвестному солдату, вечный огонь">
+								<img class="lazy" src="#" data-src="./img/landmarks/sold-slide-3.jpg" alt="памятник неизвестному солдату, вечный огонь">
 							</div>
 
 							<div class="slide__text-content">
@@ -169,7 +172,7 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide slide">
 							<div class="slide__image-block">
-								<img src="./img/landmarks/nev-slide-1.jpg" alt="памятник а. я. невскому">
+								<img class="lazy" src="#" data-src="./img/landmarks/nev-slide-1.jpg" alt="памятник а. я. невскому">
 							</div>
 
 							<div class="slide__text-content">
@@ -211,7 +214,7 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide slide">
 							<div class="slide__image-block">
-								<img src="./img/landmarks/bard-slide-1.jpg" alt="памятник н. м. бардыгину">
+								<img class="lazy" src="#" data-src="./img/landmarks/bard-slide-1.jpg" alt="памятник н. м. бардыгину">
 							</div>
 
 							<div class="slide__text-content">
@@ -238,6 +241,31 @@
 			</div>
 			<div class="slider__nav slider__next">
 				<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+			</div>
+		</div>
+	</section>
+
+	<section class="cd-section">
+		<div class="cd-section__wrapper">
+			<h3 class="cd-section__title">Карта достопримечательностей</h3>
+
+			<div class="map-wrapper" data-map="2">
+				<div id="map-2" class="map"></div>
+
+				<ul class="map-wrapper__nav map-nav">
+					<li class="map-nav__item map-nav__item_1">
+						<button class="active" data-state="1"></button>
+					</li>
+					<li class="map-nav__item map-nav__item_2">
+						<button data-state="2"></button>
+					</li>
+					<li class="map-nav__item map-nav__item_3">
+						<button data-state="3"></button>
+					</li>
+					<li class="map-nav__item map-nav__item_4">
+						<button data-state="4"></button>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</section>

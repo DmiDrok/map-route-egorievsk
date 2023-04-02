@@ -1,4 +1,5 @@
-let map = null;
+// let map = null;
+const maps = [];
 const opts = {
   layerURL : 'https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=a019e0eec8e14a79ba9ba589e0468f8f',
   center: [55.381362, 39.039537],
@@ -26,31 +27,37 @@ const opts = {
   ]
 };
 
-initMap('map', opts.center, 16);
-createLayer(opts.layerURL);
-createMarker(...opts.markers[0]);
-createMarker(...opts.markers[1]);
-createMarker(...opts.markers[2]);
-createMarker(...opts.markers[3]);
+initMap('map-1', opts.center, 16);
+initMap('map-2', opts.center, 16);
 
-addRoute(1);
+maps.forEach((map) => {
+  createLayer(map, opts.layerURL);
+  createMarker(map, ...opts.markers[0]);
+  createMarker(map, ...opts.markers[1]);
+  createMarker(map, ...opts.markers[2]);
+  createMarker(map, ...opts.markers[3]);
+  addRoute(map, 1);
+});
+
 setCorrectLogic();
 setCorrectSliders();
+setCorrectLazyLoad();
 
 
 // Иницилизация карты в DOM
 function initMap(selector, center, zoom) {
-  map = L.map(selector).setView(center, zoom);
+  const map = L.map(selector).setView(center, zoom);
+  maps.push(map);
 }
 
 // Отрисовка слоя карты
-function createLayer(layerURL) {
+function createLayer(map, layerURL) {
   const layer = L.tileLayer(layerURL);
   layer.addTo(map);
 }
 
 // Отрисовка маркера на карте
-function createMarker(coords, iconURL, description) {
+function createMarker(map, coords, iconURL, description) {
   const markerIcon = createIcon(iconURL);
   const marker = L.marker(coords, { icon: markerIcon }).addTo(map);
   setDescription(marker, description);
@@ -71,7 +78,7 @@ function setDescription(marker, descText) {
 }
 
 // Прорисовка маршрута
-function addRoute(state) {
+function addRoute(map, state) {
   const allLatLng = [
     [55.382981, 39.035817],
     [55.380676, 39.039364],
@@ -100,22 +107,28 @@ function addRoute(state) {
 
 // Логика переключения этапов
 function setCorrectLogic() {
-  const navList = document.querySelector('.map-nav');
+  const navLists = document.querySelectorAll('.map-nav');
   const navItems = document.querySelectorAll('.map-nav__item button');
+  let map = null;
 
-  navList.addEventListener('click', (event) => {
-    const clickedNav = event.target;
-    const clickedState = clickedNav.dataset.state;
+  navLists.forEach((navList) => {
+    navList.addEventListener('click', (event) => {
+      const clickedNav = event.target;
+      map = maps[+clickedNav.closest('.map-wrapper').dataset.map-1];
+      const clickedState = clickedNav.dataset.state;
 
-    navItems.forEach((item) => {
-      item.classList.remove('active');
-      item.classList.remove('visited');
-      if (item.dataset.state < clickedNav.dataset.state)
-        item.classList.add('visited');
+      navItems.forEach((item) => {
+        if (!navList.contains(item)) return;
+
+        item.classList.remove('active');
+        item.classList.remove('visited');
+        if (item.dataset.state < clickedNav.dataset.state)
+          item.classList.add('visited');
+      });
+      event.target.classList.add('active');
+
+      addRoute(map, clickedState);
     });
-    event.target.classList.add('active');
-
-    addRoute(clickedState);
   });
 }
 
@@ -135,5 +148,12 @@ function setCorrectSliders() {
         disabledClass: 'disabled'
       }
     });
+  });
+}
+
+// Ленивая загрузка
+function setCorrectLazyLoad() {
+  const lazy = new LazyLoad({
+
   });
 }
