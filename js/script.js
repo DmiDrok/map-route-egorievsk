@@ -142,6 +142,7 @@ function setCorrectSliders() {
     new Swiper(slider, {
       grabCursor: true,
       speed: 800,
+      preventInteractionOnTransition: true,
       navigation: {
         nextEl: slider.closest('.cd-section__wrapper').querySelector('.slider__next'),
         prevEl: slider.closest('.cd-section__wrapper').querySelector('.slider__prev'),
