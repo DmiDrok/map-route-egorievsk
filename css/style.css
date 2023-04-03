@@ -2,13 +2,10 @@ body {
   min-width: 915px;
 }
 
-
 :root {
   --map-shadow: rgb(255, 255, 255) 0px 2px 10px;
   --card-img-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
-
-
 
 .map {
   height: 650px;
@@ -31,12 +28,6 @@ body {
   position: relative;
 }
 
-.cd-section__inner {
-  max-width: 1366px;
-  margin: 0 auto;
-  position: relative;
-}
-
 .cd-section__title {
   font-size: 24px;
   font-weight: 700;
@@ -46,6 +37,8 @@ body {
 
 .cd-section__slider-container {
   min-width: 0;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 .leaflet-popup-content-wrapper {
@@ -159,7 +152,7 @@ body {
 
 .slider__nav {
   position: absolute;
-  bottom: -45px;
+  bottom: 35px;
   cursor: pointer;
   transition: opacity ease .2s;
 }
