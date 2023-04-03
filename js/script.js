@@ -27,8 +27,8 @@ const opts = {
   ]
 };
 
-initMap('map-1', opts.center, 16);
-initMap('map-2', opts.center, 16);
+initMap('map-1', opts.center, 16, 15);
+initMap('map-2', opts.center, 16, 15);
 
 maps.forEach((map) => {
   createLayer(map, opts.layerURL);
@@ -45,8 +45,9 @@ setCorrectSliders();
 
 
 // Иницилизация карты в DOM
-function initMap(selector, center, zoom) {
-  const map = L.map(selector).setView(center, zoom);
+function initMap(selector, center, zoom, minZoom) {
+  const map = L.map(selector,
+    { center, zoom, minZoom });
   maps.push(map);
 }
 

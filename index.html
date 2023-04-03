@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet"> -->
 	
 	<script defer src="./js/console-off.js"></script>
 
@@ -21,8 +21,8 @@
 	<script defer src="./js/libs/main.js"></script>
 
 	<!-- Leaflet (карта) -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+	<link rel="stylesheet" href="./css/libs/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+	<script src="./js/libs/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
 	<!-- Swiper -->
 	<link rel="stylesheet" href="./css/libs/swiper-bundle.min.css">
@@ -32,6 +32,7 @@
 	<script defer src="./js/libs/lazyload.min.js"></script>
 
 	<!-- Свои стили / скрипты -->
+	<link rel="stylesheet" href="./css/fonts.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<script defer src="./js/script.js"></script>
 
@@ -43,208 +44,218 @@
 <body data-hijacking="on" data-animation="gallery">
 	<section class="cd-section visible">
 		<div class="cd-section__wrapper">
-			<h3 class="cd-section__title">Карта достопримечательностей</h3>
+			<div class="cd-section__inner">
+				<h3 class="cd-section__title">Карта достопримечательностей</h3>
 
-			<div class="map-wrapper" data-map="1">
-				<div id="map-1" class="map"></div>
+				<div class="map-wrapper" data-map="1">
+					<div id="map-1" class="map"></div>
 
-				<ul class="map-wrapper__nav map-nav">
-					<li class="map-nav__item map-nav__item_1">
-						<button class="active" data-state="1"></button>
-					</li>
-					<li class="map-nav__item map-nav__item_2">
-						<button data-state="2"></button>
-					</li>
-					<li class="map-nav__item map-nav__item_3">
-						<button data-state="3"></button>
-					</li>
-					<li class="map-nav__item map-nav__item_4">
-						<button data-state="4"></button>
-					</li>
-				</ul>
+					<ul class="map-wrapper__nav map-nav">
+						<li class="map-nav__item map-nav__item_1">
+							<button class="active" data-state="1"></button>
+						</li>
+						<li class="map-nav__item map-nav__item_2">
+							<button data-state="2"></button>
+						</li>
+						<li class="map-nav__item map-nav__item_3">
+							<button data-state="3"></button>
+						</li>
+						<li class="map-nav__item map-nav__item_4">
+							<button data-state="4"></button>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="cd-section">
 		<div class="cd-section__wrapper">
-			<h3 class="cd-section__title">Памятник В. И. Ленину</h3>
+			<div class="cd-section__inner">
+				<h3 class="cd-section__title">Памятник В. И. Ленину</h3>
 
-			<div class="cd-section__slider-container">
-				<div class="swiper slider">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide slide">
-							<div class="slide__image-block">
-								<img src="./img/landmarks/lenin-slide-1.jpg" alt="памятник в. и. ленину">
-							</div>
+				<div class="cd-section__slider-container">
+					<div class="swiper slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide slide">
+								<div class="slide__image-block">
+									<img src="./img/landmarks/lenin-slide-1.jpg" alt="памятник в. и. ленину">
+								</div>
 
-							<div class="slide__text-content">
-								<p>Произведение скульптора Г. Д. Алексеева было установлено в Егорьевске в 1927 г. Тогда еще не было принято приукрашать образ вождя, поэтому памятник в Егорьевске считается наиболее приближенным к портретному сходству с вождем мировой революции. Скульптор ваял образ с «натуры», основываясь на зарисовках вождя в его кабинете.</p>
+								<div class="slide__text-content">
+									<p>Произведение скульптора Г. Д. Алексеева было установлено в Егорьевске в 1927 г. Тогда еще не было принято приукрашать образ вождя, поэтому памятник в Егорьевске считается наиболее приближенным к портретному сходству с вождем мировой революции. Скульптор ваял образ с «натуры», основываясь на зарисовках вождя в его кабинете.</p>
 
-								<p>Бронзовый монумент «Призывающий вождь» скульптора Г. Д. Алексеева на серогранитном постаменте был открыт в 1927 г. к 10-летию Великой Октябрьской социалистической революции.</p>
+									<p>Бронзовый монумент «Призывающий вождь» скульптора Г. Д. Алексеева на серогранитном постаменте был открыт в 1927 г. к 10-летию Великой Октябрьской социалистической революции.</p>
+								</div>
 							</div>
-						</div>
-						<div class="swiper-slide slide">
-							<div class="slide__image-block">
-								<img src="./img/landmarks/lenin-slide-2.jpg" alt="памятник в. и. ленину">
-							</div>
+							<div class="swiper-slide slide">
+								<div class="slide__image-block">
+									<img src="./img/landmarks/lenin-slide-2.jpg" alt="памятник в. и. ленину">
+								</div>
 
-							<div class="slide__text-content">
-								<p>Оригинал скульптуры, сделанный из гипса, является экспонатом московского музея им. В.И. Ленина. Изначально памятник был расположен на Ленинской площади, где сейчас возведен мемориал с Вечным огнем. В 1957 г., к 40-летию Октября памятник В.И. Ленину был перенесен на Советскую площадь.</p>
-								<p>Проект преображения Советской площади принадлежал художнику Г. И. Колобанову.</p>
-							</div>
-						</div><div class="swiper-slide slide">
-							<div class="slide__image-block">
-								<img src="./img/landmarks/lenin-slide-3.jpg" alt="памятник в. и. ленину">
-							</div>
+								<div class="slide__text-content">
+									<p>Оригинал скульптуры, сделанный из гипса, является экспонатом московского музея им. В.И. Ленина. Изначально памятник был расположен на Ленинской площади, где сейчас возведен мемориал с Вечным огнем. В 1957 г., к 40-летию Октября памятник В.И. Ленину был перенесен на Советскую площадь.</p>
+									<p>Проект преображения Советской площади принадлежал художнику Г. И. Колобанову.</p>
+								</div>
+							</div><div class="swiper-slide slide">
+								<div class="slide__image-block">
+									<img src="./img/landmarks/lenin-slide-3.jpg" alt="памятник в. и. ленину">
+								</div>
 
-							<div class="slide__text-content">
-								<p>Проект преображения Советской площади принадлежал художнику Г. И. Колобанову.</p>
-								<p>В годы СССР здесь проводились шествия и демонстрации, митинги и народные гуляния. К постаменту памятника была пристроена трибуна для высокопоставленных лиц города. Сам памятник представляет историческую и художественную ценность.</p>
+								<div class="slide__text-content">
+									<p>Проект преображения Советской площади принадлежал художнику Г. И. Колобанову.</p>
+									<p>В годы СССР здесь проводились шествия и демонстрации, митинги и народные гуляния. К постаменту памятника была пристроена трибуна для высокопоставленных лиц города. Сам памятник представляет историческую и художественную ценность.</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="slider__nav slider__prev">
-				<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
-			</div>
-			<div class="slider__nav slider__next">
-				<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				<div class="slider__nav slider__prev">
+					<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				</div>
+				<div class="slider__nav slider__next">
+					<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="cd-section">
 		<div class="cd-section__wrapper">
-			<h3 class="cd-section__title">Вечный огонь и мемориал Славы</h3>
+			<div class="cd-section__inner">
+				<h3 class="cd-section__title">Вечный огонь и мемориал Славы</h3>
 
-			<div class="cd-section__slider-container">
-				<div class="swiper slider">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide slide">
-							<div class="slide__image-block">
-								<img src="./img/landmarks/sold-slide-2.jpg" alt="памятник неизвестному солдату, вечный огонь">
+				<div class="cd-section__slider-container">
+					<div class="swiper slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide slide">
+								<div class="slide__image-block">
+									<img src="./img/landmarks/sold-slide-2.jpg" alt="памятник неизвестному солдату, вечный огонь">
+								</div>
+
+								<div class="slide__text-content">
+									<p>В 1978 году на одной из площадей города установлен Вечный огонь и мемориал Славы в честь героев, павших в боях за свободу и независимость нашей Родины.
+									<p>Это главный военный мемориал в городе, посвященный жителям Егорьевска, погибшим в боях за освобождение страны от немецко-фашистских захватчиков в 1941–1945 годах.</p>
+								</div>
 							</div>
+							<div class="swiper-slide slide">
+								<div class="slide__image-block">
+									<img src="./img/landmarks/sold-slide-1.jpg" alt="памятник неизвестному солдату, вечный огонь">
+								</div>
 
-							<div class="slide__text-content">
-								<p>В 1978 году на одной из площадей города установлен Вечный огонь и мемориал Славы в честь героев, павших в боях за свободу и независимость нашей Родины.
-								<p>Это главный военный мемориал в городе, посвященный жителям Егорьевска, погибшим в боях за освобождение страны от немецко-фашистских захватчиков в 1941–1945 годах.</p>
+								<div class="slide__text-content">
+									<p>Мемориал представляет собой композицию в виде скульптуры воина в полный рост, возвышающегося на постаменте, облицованном гранитными плитами.</p> 
+									<p>В 1987 г. у его подножия вспыхнул Вечный огонь, зажженный Героем Советского Союза <a href="https://ru.wikipedia.org/wiki/%D0%A8%D0%BB%D1%8F%D0%B5%D0%B2,_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87" target="_blank"><u>Николаем Васильевичем Шляевым.</u></a> На противоположной стороне улицы установлена стела с барельефом, на которой изображена сцена сражения.</p>
+								</div>
+							</div><div class="swiper-slide slide">
+								<div class="slide__image-block">
+									<img src="./img/landmarks/sold-slide-3.jpg" alt="памятник неизвестному солдату, вечный огонь">
+								</div>
+
+								<div class="slide__text-content">
+									<p>Памятник-мемориал погибшим воинам в годы Великой Отечественной войны 1941−1945 гг. открыт в день празднования 200-летия города Егорьевска 17 ноября 1978 года. Он поставлен на Ленинской площади, ныне Советская улица, по проекту скульптора Мызникова и архитектора Шарова.
+
+									<p>Вечный огонь и мемориал Славы символизирует и восславляет героизм и отвагу всех павших в борьбе за мирное небо над головой. Невозможно перечислить имена всех, кто пал в то страшное время, поэтому этот мемориал воплощает каждого, не называя никого конкретно.</p>
+								</div>
 							</div>
 						</div>
-						<div class="swiper-slide slide">
-							<div class="slide__image-block">
-								<img src="./img/landmarks/sold-slide-1.jpg" alt="памятник неизвестному солдату, вечный огонь">
-							</div>
 
-							<div class="slide__text-content">
-								<p>Мемориал представляет собой композицию в виде скульптуры воина в полный рост, возвышающегося на постаменте, облицованном гранитными плитами.</p> 
-								<p>В 1987 г. у его подножия вспыхнул Вечный огонь, зажженный Героем Советского Союза <a href="https://ru.wikipedia.org/wiki/%D0%A8%D0%BB%D1%8F%D0%B5%D0%B2,_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87" target="_blank"><u>Николаем Васильевичем Шляевым.</u></a> На противоположной стороне улицы установлена стела с барельефом, на которой изображена сцена сражения.</p>
-							</div>
-						</div><div class="swiper-slide slide">
-							<div class="slide__image-block">
-								<img src="./img/landmarks/sold-slide-3.jpg" alt="памятник неизвестному солдату, вечный огонь">
-							</div>
-
-							<div class="slide__text-content">
-								<p>Памятник-мемориал погибшим воинам в годы Великой Отечественной войны 1941−1945 гг. открыт в день празднования 200-летия города Егорьевска 17 ноября 1978 года. Он поставлен на Ленинской площади, ныне Советская улица, по проекту скульптора Мызникова и архитектора Шарова.
-
-								<p>Вечный огонь и мемориал Славы символизирует и восславляет героизм и отвагу всех павших в борьбе за мирное небо над головой. Невозможно перечислить имена всех, кто пал в то страшное время, поэтому этот мемориал воплощает каждого, не называя никого конкретно.</p>
-							</div>
-						</div>
 					</div>
-
 				</div>
-			</div>
 
-			<div class="slider__nav slider__prev">
-				<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
-			</div>
-			<div class="slider__nav slider__next">
-				<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				<div class="slider__nav slider__prev">
+					<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				</div>
+				<div class="slider__nav slider__next">
+					<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="cd-section">
 		<div class="cd-section__wrapper">
-			<h3 class="cd-section__title">Памятник Александру Невскому</h3>
+			<div class="cd-section__inner">
+				<h3 class="cd-section__title">Памятник Александру Невскому</h3>
 
-			<div class="cd-section__slider-container">
-				<div class="swiper slider">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide slide">
-							<div class="slide__image-block">
-								<img src="./img/landmarks/nev-slide-1.jpg" alt="памятник а. я. невскому">
+				<div class="cd-section__slider-container">
+					<div class="swiper slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide slide">
+								<div class="slide__image-block">
+									<img src="./img/landmarks/nev-slide-1.jpg" alt="памятник а. я. невскому">
+								</div>
+
+								<div class="slide__text-content">
+									<p>12 сентября 2021 года состоялось открытие памятника святому Александру Невскому, в котором благоверный князь запечатлен не традиционно, как воин в доспехах, а сидящим в княжеском кресле.
+
+									<p>Открытие монумента было приурочено к празднованию 800-летия со дня рождения святого князя, а также отмечаемому Дню города</p>
+								</div>
 							</div>
+							<div class="swiper-slide slide">
+								<div class="slide__image-block">
+									<img src="./img/landmarks/nev-slide-2.jpg" alt="памятник а. я. невскому">
+								</div>
 
-							<div class="slide__text-content">
-								<p>12 сентября 2021 года состоялось открытие памятника святому Александру Невскому, в котором благоверный князь запечатлен не традиционно, как воин в доспехах, а сидящим в княжеском кресле.
-
-								<p>Открытие монумента было приурочено к празднованию 800-летия со дня рождения святого князя, а также отмечаемому Дню города</p>
-							</div>
-						</div>
-						<div class="swiper-slide slide">
-							<div class="slide__image-block">
-								<img src="./img/landmarks/nev-slide-2.jpg" alt="памятник а. я. невскому">
-							</div>
-
-							<div class="slide__text-content">
-								<p>Памятник святому Александру Невскому изготовлен в мастерской члена Союза художников России скульптора Виталия Казанского.</p>
-								<p>По своему художественному исполнению монумент является довольно редким, т.к. традиционно благоверный князь изображается не сидящим в княжеском кресле, а либо в полный рост в доспехах, либо в доспехах на коне, т.е. как князь-воин. Также частыми в наши дни являются бюсты святого Александра Невского, в которых он запечатлен в шлеме, а не княжеской шапке.</p>
-								<p>Данный же монумент больше раскрывает образ святого Александра Невского как князя-правителя.</p>
+								<div class="slide__text-content">
+									<p>Памятник святому Александру Невскому изготовлен в мастерской члена Союза художников России скульптора Виталия Казанского.</p>
+									<p>По своему художественному исполнению монумент является довольно редким, т.к. традиционно благоверный князь изображается не сидящим в княжеском кресле, а либо в полный рост в доспехах, либо в доспехах на коне, т.е. как князь-воин. Также частыми в наши дни являются бюсты святого Александра Невского, в которых он запечатлен в шлеме, а не княжеской шапке.</p>
+									<p>Данный же монумент больше раскрывает образ святого Александра Невского как князя-правителя.</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="slider__nav slider__prev">
-				<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
-			</div>
-			<div class="slider__nav slider__next">
-				<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				<div class="slider__nav slider__prev">
+					<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				</div>
+				<div class="slider__nav slider__next">
+					<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="cd-section">
 		<div class="cd-section__wrapper">
-			<h3 class="cd-section__title">Памятник Никифору Бардыгину</h3>
+			<div class="cd-section__inner">
+				<h3 class="cd-section__title">Памятник Никифору Бардыгину</h3>
 
-			<div class="cd-section__slider-container">
-				<div class="swiper slider">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide slide">
-							<div class="slide__image-block">
-								<img src="./img/landmarks/bard-slide-1.jpg" alt="памятник н. м. бардыгину">
-							</div>
+				<div class="cd-section__slider-container">
+					<div class="swiper slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide slide">
+								<div class="slide__image-block">
+									<img src="./img/landmarks/bard-slide-1.jpg" alt="памятник н. м. бардыгину">
+								</div>
 
-							<div class="slide__text-content">
-								<p>19 августа 2021 года был возведён памятник первому голове города - Никифору Бардыгину. Автор памятника - народный художник Николай Иванов.</p> 
-								<p>Купец первой гильдии, основатель известной купеческой династии, меценат Н.М.Бардыгин на протяжении 29 лет работал в должности главы города Егорьевска (1872-1901), превратив его в один из самых благоустроенных в центральной России. Он упорядочил его земельное имущество, поднял доходы, уделял большое внимание вопросам образования, санитарии, пожарной безопасности.</p>
+								<div class="slide__text-content">
+									<p>19 августа 2021 года был возведён памятник первому голове города - Никифору Бардыгину. Автор памятника - народный художник Николай Иванов.</p> 
+									<p>Купец первой гильдии, основатель известной купеческой династии, меценат Н.М.Бардыгин на протяжении 29 лет работал в должности главы города Егорьевска (1872-1901), превратив его в один из самых благоустроенных в центральной России. Он упорядочил его земельное имущество, поднял доходы, уделял большое внимание вопросам образования, санитарии, пожарной безопасности.</p>
+								</div>
 							</div>
-						</div>
-						<div class="swiper-slide slide">
-							<div class="slide__image-block">
-								<img src="./img/landmarks/bard-slide-2.jpg" alt="памятник н. м. бардыгину">
-							</div>
+							<div class="swiper-slide slide">
+								<div class="slide__image-block">
+									<img src="./img/landmarks/bard-slide-2.jpg" alt="памятник н. м. бардыгину">
+								</div>
 
-							<div class="slide__text-content">
-								<p>По его инициативе и значительном личном участии в Егорьевске велось большое каменное строительство, было сделано газовое уличное освещение, проведен водопровод, создана пожарная команда, построено 4 учебных заведения, 2 больницы, возведено и отремонтировано несколько храмов, улицы вымощены камнем, открыт большой общественный сад. Были проведены и другие работы по благоустройству.</p>
-								<p>Памятник установили на площади перед Собором Александра Невского не случайно. Именно Никифор Бардыгин в далеком 1874 году выделил личные средства на возведение святыни.</p>
+								<div class="slide__text-content">
+									<p>По его инициативе и значительном личном участии в Егорьевске велось большое каменное строительство, было сделано газовое уличное освещение, проведен водопровод, создана пожарная команда, построено 4 учебных заведения, 2 больницы, возведено и отремонтировано несколько храмов, улицы вымощены камнем, открыт большой общественный сад. Были проведены и другие работы по благоустройству.</p>
+									<p>Памятник установили на площади перед Собором Александра Невского не случайно. Именно Никифор Бардыгин в далеком 1874 году выделил личные средства на возведение святыни.</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="slider__nav slider__prev">
-				<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
-			</div>
-			<div class="slider__nav slider__next">
-				<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				<div class="slider__nav slider__prev">
+					<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				</div>
+				<div class="slider__nav slider__next">
+					<img src="./img/arrow-next.svg" alt="" aria-hidden="true">
+				</div>
 			</div>
 		</div>
 	</section>
