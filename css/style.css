@@ -38,7 +38,6 @@ body {
 .cd-section__slider-container {
   min-width: 0;
   max-width: 1366px;
-  margin: 0 auto;
 }
 
 .leaflet-popup-content-wrapper {
@@ -182,22 +181,29 @@ body {
   }
 }
 
+
 @media (max-width: 915px) {
   .cd-section {
     min-height: 800px;
   }
-
+  
   .slide {
     flex-direction: column !important;
     row-gap: 30px;
     align-items: center;
   }
-
+  
   .slide__text-content {
     text-align: center;
   }
 
   .slider__nav {
     bottom: 10px;
+  }
+}
+
+@media (min-width: 1530px) {
+  .cd-section__slider-container {
+    margin: 0 auto;
   }
 }
