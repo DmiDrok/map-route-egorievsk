@@ -1,4 +1,3 @@
-// let map = null;
 const maps = [];
 const opts = {
   layerURL : 'https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=a019e0eec8e14a79ba9ba589e0468f8f',
@@ -41,7 +40,6 @@ maps.forEach((map) => {
 
 setCorrectLogic();
 setCorrectSliders();
-// setCorrectLazyLoad();
 
 
 // Иницилизация карты в DOM
@@ -153,10 +151,3 @@ function setCorrectSliders() {
     });
   });
 }
-
-// Ленивая загрузка
-// function setCorrectLazyLoad() {
-//   const lazy = new LazyLoad({
-
-//   });
-// }
