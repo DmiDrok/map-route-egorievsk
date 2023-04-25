@@ -40,6 +40,7 @@ maps.forEach((map) => {
 
 setCorrectLogic();
 setCorrectSliders();
+setCorrectLastMap();
 
 
 // Иницилизация карты в DOM
@@ -150,4 +151,22 @@ function setCorrectSliders() {
       }
     });
   });
+}
+
+// Последняя карта в последний этап
+function setCorrectLastMap() {
+  const navItems = document.querySelectorAll('[data-map="2"] .map-nav__item button');
+  addRoute(maps[maps.length-1], 4);
+
+  for (let i = 0; i < navItems.length; i++) {
+    if (i === navItems.length-1) {
+      navItems[i].classList.add('active');
+      continue;
+    }
+    if (navItems[i].classList.contains('active')) {
+      navItems[i].classList.remove('active');
+    }
+
+    navItems[i].classList.add('visited');
+  }
 }
